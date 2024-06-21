@@ -5,3 +5,10 @@ declare type Task = {
   summary: string;
   dueDate: string;
 };
+
+
+declare type NewTaskData = {
+  title: string;
+  summary: string;
+  date: string;
+};
