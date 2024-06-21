@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -14,14 +15,18 @@ export class TasksComponent {
   @Input({ required: true }) name!: string;
   isAddingTask = false;
 
- 
+  // private tasksService: TasksService;
+
+  // constructor(tasksService: TasksService) {
+  //   this.tasksService = tasksService;
+  // }
+  constructor(private tasksService: TasksService) {}
 
   get selectedUserTasks() {
-    return 
+    return this.tasksService.getUserTasks(this.userId);
   }
 
-  onCompleteTask(id: string) {
-  }
+  onCompleteTask(id: string) {}
 
   onStartAddTask() {
     this.isAddingTask = true;
@@ -31,7 +36,6 @@ export class TasksComponent {
     this.isAddingTask = false;
   }
   onAddTask(taskData: NewTaskData) {
-     this.isAddingTask = false;
-   
+    this.isAddingTask = false;
   }
 }
