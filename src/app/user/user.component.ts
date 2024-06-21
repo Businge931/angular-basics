@@ -8,12 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  @Input() avator!: string;
-  @Input() name!: string;
+  @Input({ required: true }) avator!: string;
+  @Input({ required: true }) name!: string;
 
-get imagePath(){
-  return 'assets/users/' + this.avator
-}
+  get imagePath() {
+    return 'assets/users/' + this.avator;
+  }
 
   onSelectUser() {}
 }
