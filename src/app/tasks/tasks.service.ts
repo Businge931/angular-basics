@@ -18,14 +18,14 @@ export class TasksService {
       summary: 'Build a first prototype of the online shop website',
       dueDate: '2024-05-31',
     },
-    {
-      id: 't3',
-      userId: 'u3',
-      title: 'Prepare issue template',
-      summary:
-        'Prepare and describe an issue template which will help with project management',
-      dueDate: '2024-06-15',
-    },
+    // {
+    //   id: 't3',
+    //   userId: 'u3',
+    //   title: 'Prepare issue template',
+    //   summary:
+    //     'Prepare and describe an issue template which will help with project management',
+    //   dueDate: '2024-06-15',
+    // },
   ];
 
   constructor() {
